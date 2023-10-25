@@ -3,9 +3,9 @@
 The Pilgrim is a simple web application that allows users to search for countries by name or country code. It provides information about the matched countries, including their flags, official and common names, population, currency, and more.
 
 ## Table of Contents
-- [Features](##features)
-- [Installation](##installation)
-- [Usage](##usage)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Features
 
