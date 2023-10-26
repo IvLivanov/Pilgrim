@@ -23,6 +23,8 @@ axios
     console.error('Error fetching data:', error);
   });
 
+//The following code finds a cca2, cca3, ccn3 or name corresponding to the query
+//It is assumed that country names and codes are unique
 app.get('/country/:query', (req, res) => {
   const query = req.params.query.toLowerCase();
   const matchingCountries = fetchedData.filter((c) => {
@@ -48,7 +50,7 @@ app.get('/country/:query', (req, res) => {
   });
 
   if (matchingCountries.length > 0) {
-    res.json(matchingCountries[0]); // Return the first matching country as a JSON object
+    res.json(matchingCountries[0]); // Return the first matching country as a JSON object (see the assumption above)
   } else {
     res.status(404).json({ error: 'No matching country found' });
   }

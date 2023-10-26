@@ -1,3 +1,4 @@
+//This function requests country data from the backend
 export async function searchCountry(searchTerm) {
     try {
         //Query backend

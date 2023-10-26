@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+//This function displays the data received from the backend
 function renderCountry(countryData) {
   if (countryData) {
     
