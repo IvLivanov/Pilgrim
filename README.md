@@ -17,25 +17,30 @@ The Pilgrim is a simple web application that allows users to search for countrie
 
 To run the Country Search App locally, follow these steps:
 
-1. Clone this repository:
+1. Ensure you have npm 9.8.1 or later 
+and node >= 18.18.2 installed on your machine
+You can find instructions for installation here:
+https://developer.ibm.com/learningpaths/get-started-nodejs/install-nodejs
+
+2. Set current directory to the frontend folder. 
 
    ```bash
-   git clone https://github.com/IvLivanov/Pilgrim.git
+   cd frontend
 
-   
-Start the backend server: 
-In the backend folder run
+3. (Optional) Make sure the dependencies are installed
+   (they are included in the distribution)
+     ```bash
+   npm install
+3. Run dev script, which will run both frontend and backend:
+
   ```bash
-npm install
-node server.mjs
+   npm run dev
    ```
 
-Start the frontend server:
-In the frontend folder run
+4. (Optional) prepare your production build and configure system for optimized deployment
   ```bash
-npm install
-npm start
-  ```
+   npm run build
+   ```
 
 ## Usage
 Enter a country name or country code in the search input field.
