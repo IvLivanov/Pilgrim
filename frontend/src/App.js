@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import renderCountry from './renderCountry.js';
 import {searchCountry} from './searchCountry.js';
 
+
+
+
 function App() {
     //use state for searchTerm (country name or code)
     const [searchTerm, setSearchTerm] = useState('');
@@ -47,4 +50,3 @@ function App() {
     );
 }
 
-export default App;

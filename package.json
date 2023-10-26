@@ -1,0 +1,22 @@
+{
+  "name": "pilgrim",
+  "version": "1.0.0",
+  "description": "The Pilgrim is a simple web application that allows users to search for countries by name or country code. It provides information about the matched countries, including their flags, official and common names, population, currency, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && node server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+"url": 
+  }
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.5.1"
+}
+}

@@ -2,12 +2,25 @@ import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
 
+
+
+
 const app = express();
-const port = 3001;
-
 app.use(cors());
-
 let fetchedData = []; // Store the fetched data
+
+
+app.get("/*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname,"../frontend/build/index.html"),
+    function(err){
+      if (err) {res.status(500).send(err)}
+    }
+  )
+} 
+
+)
+
 
 app.get('/', (req, res) => {
   res.send('Welcome to the server');
@@ -22,6 +35,10 @@ axios
   .catch((error) => {
     console.error('Error fetching data:', error);
   });
+
+
+
+
 
 app.get('/country/:query', (req, res) => {
   const query = req.params.query.toLowerCase();
@@ -54,6 +71,6 @@ app.get('/country/:query', (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log("Listening to port " + PORT));
